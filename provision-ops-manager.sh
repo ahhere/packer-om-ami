@@ -23,6 +23,10 @@ function osConfig(){
   echo "Disabling THP"
   echo -e "never" > /sys/kernel/mm/transparent_hugepage/enabled
   echo -e "never" > /sys/kernel/mm/transparent_hugepage/defrag
+   # ulimits because they will cause you hassle
+   ulimit -q 819200
+   ulimit -n 21000
+   ulimit -t unlimited
 }
 
 function installMongod(){
