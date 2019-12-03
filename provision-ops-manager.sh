@@ -74,7 +74,7 @@ function buildConf(){
   cat <<eof >> /opt/mongodb/mms/conf/conf-mms.properties
 mms.ignoreInitialUiSetup=true
 mongo.mongoUri=mongodb://localhost:27017
-mms.centralUrl=$HOST_NAME:8080
+mms.centralUrl=$HOST_FQDN:8080
 mms.fromEmailAddr=example@$HOST_NAME
 mms.replyToEmailAddr=example@$HOST_NAME
 mms.adminEmailAddr=example@$HOST_NAME
